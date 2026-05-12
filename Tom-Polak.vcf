@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Polak;Tom;;;
+FN:Tom Polak
+ORG:Levata
+TITLE:Finance Director
+TEL;TYPE=CELL,VOICE:+44 7837 501798
+EMAIL;TYPE=INTERNET:tom.polak@levata.com
+URL:https://www.levata.com
+END:VCARD
