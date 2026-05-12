@@ -55,7 +55,6 @@
 
             margin-bottom:30px;
 
-            /* keine extra Rundungen/Artefakte */
             padding:0;
 
             background:linear-gradient(
@@ -90,8 +89,8 @@
 
             object-fit:contain;
 
-            margin-top:-20%;
-            margin-bottom:-20%;
+            margin-top:-5%;
+            margin-bottom:-5%;
         }
 
         .name{
@@ -338,12 +337,9 @@
 
                 transform:scale(1.8);
 
-                margin-top:-20%;
-                margin-bottom:-20%;
+                /* ✅ sauberer Crop statt hacky margins */
+                clip-path: inset(20% 0 20% 0);
             }
-
-            /* HIER DIE ÄNDERUNG:
-               Inhalt unter T: und M: */
 
             .text{
 
@@ -380,29 +376,13 @@
     <div class="logo-container">
 
         <img src="levata-logo.jpg"
-             alt="Levata"
-             onerror="this.style.display='none'; document.getElementById('fallback-logo').style.display='block';">
-
-        <div id="fallback-logo"
-             style="
-                display:none;
-                font-size:2.2rem;
-                font-weight:600;
-                color:white;
-                letter-spacing:1px;
-             ">
-            levata
-        </div>
+             alt="Levata">
 
     </div>
 
-    <h1 class="name">
-        Tom Polak
-    </h1>
+    <h1 class="name">Tom Polak</h1>
 
-    <div class="company">
-        Finance Director
-    </div>
+    <div class="company">Finance Director</div>
 
     <div class="detail">
 
@@ -413,10 +393,7 @@
             <span class="text">
 
                 <span class="label">T:</span>
-
-                <span>
-                    +44 7837 501798
-                </span>
+                <span>+44 7837 501798</span>
 
             </span>
 
@@ -441,30 +418,27 @@
 
     </div>
 
-    <!-- WEBSITE BUTTON -->
     <div class="website">
 
         <a href="https://www.levata.com"
            target="_blank"
            class="website-button">
 
-            🌐 Visit Website
+            🌐 Visit Levata.com
 
         </a>
 
     </div>
 
-    <!-- VCARD BUTTON -->
     <a href="Tom-Polak.vcf"
-       class="vcard-button"
-       rel="noopener noreferrer">
+       class="vcard-button">
 
         ⬇️ Save Contact (vCard)
 
     </a>
 
     <div class="hint">
-        Click to save Tom's contact details to your device
+        Click to save contact details
     </div>
 
     <div class="location">
@@ -472,22 +446,6 @@
     </div>
 
 </div>
-
-<script>
-
-window.onload = function(){
-
-    var img = document.querySelector('.logo-container img');
-
-    if(img && img.complete && img.naturalHeight === 0){
-
-        img.style.display='none';
-
-        document.getElementById('fallback-logo').style.display='block';
-    }
-}
-
-</script>
 
 </body>
 </html>
