@@ -1,325 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tom Polak | Levata</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tom Polak | Levata</title>
 
-<style>
+    <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
 
-body{
+        body{
 
-    font-family:'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family:'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
-    background:linear-gradient(
-        to bottom,
-        #a245a6 0%,
-        #7a5eb7 45%,
-        #0077c8 100%
-    );
+            background:linear-gradient(
+                to bottom,
+                #a245a6 0%,
+                #7a5eb7 45%,
+                #0077c8 100%
+            );
 
-    min-height:100vh;
+            min-height:100vh;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+            display:flex;
+            align-items:center;
+            justify-content:center;
 
-    padding:20px;
-}
+            padding:20px;
+        }
 
-.card{
+        .card{
 
-    background:white;
+            background:white;
 
-    max-width:550px;
-    width:100%;
+            max-width:550px;
+            width:100%;
 
-    padding:45px 40px;
+            padding:45px 40px;
 
-    border-radius:24px;
+            border-radius:24px;
 
-    box-shadow:0 30px 50px -20px rgba(0,0,0,0.3);
+            box-shadow:0 30px 50px -20px rgba(0,0,0,0.3);
 
-    text-align:center;
+            text-align:center;
 
-    border-top:5px solid #0077c8;
-}
+            border-top:5px solid #0077c8;
+        }
 
-/* =========================
-   LOGO FIX (STABLE VERSION)
-   ========================= */
+        .logo-container{
 
-.logo-container{
+            margin-bottom:30px;
 
-    margin-bottom:30px;
+            padding:0;
 
-    padding:0;
+            background:linear-gradient(
+                to bottom,
+                #a245a6 0%,
+                #7a5eb7 45%,
+                #0077c8 100%
+            );
 
-    background:linear-gradient(
-        to bottom,
-        #a245a6 0%,
-        #7a5eb7 45%,
-        #0077c8 100%
-    );
+            border-radius:0;
 
-    border-radius:0;
+            min-height:220px;
 
-    min-height:220px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+            overflow:hidden;
+        }
 
-    overflow:hidden;
-}
+        .logo-container img{
 
-.logo-inner{
+            transform:scale(2.1);
 
-    width:100%;
-    height:100%;
+            max-width:100%;
+            max-height:100%;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+            width:auto;
+            height:auto;
 
-    overflow:hidden;
-}
+            display:block;
 
-.logo-inner img{
+            object-fit:contain;
 
-    width:auto;
-    height:140%;
+            margin-top:-5%;
+            margin-bottom:-5%;
+        }
 
-    object-fit:cover;
-}
+        .name{
 
-/* ========================= */
+            font-size:2.5rem;
 
-.name{
+            font-weight:500;
 
-    font-size:2.5rem;
+            color:#1a2a3a;
 
-    font-weight:500;
+            line-height:1.2;
 
-    color:#1a2a3a;
+            margin-bottom:5px;
 
-    line-height:1.2;
+            font-family:'Georgia', serif;
+        }
 
-    margin-bottom:5px;
+        .company{
 
-    font-family:'Georgia', serif;
-}
+            font-size:1.4rem;
 
-.company{
+            color:#0077c8;
 
-    font-size:1.4rem;
+            font-weight:500;
 
-    color:#0077c8;
+            margin-bottom:25px;
 
-    font-weight:500;
+            padding-bottom:15px;
 
-    margin-bottom:25px;
+            border-bottom:2px solid #e5eef5;
 
-    padding-bottom:15px;
+            letter-spacing:0.5px;
+        }
 
-    border-bottom:2px solid #e5eef5;
+        .detail{
 
-    letter-spacing:0.5px;
-}
+            margin:30px 0;
 
-.detail{
+            text-align:left;
 
-    margin:30px 0;
+            background:#f5f8fc;
 
-    text-align:left;
+            padding:25px;
 
-    background:#f5f8fc;
+            border-radius:16px;
+        }
 
-    padding:25px;
+        .detail-item{
 
-    border-radius:16px;
-}
+            display:flex;
 
-.detail-item{
+            align-items:flex-start;
 
-    display:flex;
+            margin:18px 0;
 
-    align-items:flex-start;
+            font-size:1.1rem;
+        }
 
-    margin:18px 0;
+        .emoji{
 
-    font-size:1.1rem;
-}
+            font-size:1.5rem;
 
-.emoji{
+            margin-right:18px;
 
-    font-size:1.5rem;
+            min-width:35px;
 
-    margin-right:18px;
+            text-align:center;
 
-    min-width:35px;
+            color:#0077c8;
+        }
 
-    text-align:center;
+        .text{
 
-    color:#0077c8;
-}
+            color:#2c4050;
 
-.text{
+            line-height:1.4;
 
-    color:#2c4050;
+            display:flex;
 
-    line-height:1.4;
+            align-items:center;
 
-    display:flex;
+            gap:6px;
 
-    align-items:center;
+            flex-wrap:wrap;
+        }
 
-    gap:6px;
+        .label{
 
-    flex-wrap:wrap;
-}
+            font-weight:600;
 
-.label{
+            color:#0077c8;
 
-    font-weight:600;
+            min-width:28px;
+        }
 
-    color:#0077c8;
+        .email{
 
-    min-width:28px;
-}
+            color:#0077c8;
 
-.email{
+            text-decoration:none;
 
-    color:#0077c8;
+            font-weight:500;
 
-    text-decoration:none;
+            word-break:break-word;
+        }
 
-    font-weight:500;
+        .email:hover{
+            text-decoration:underline;
+        }
 
-    word-break:break-word;
-}
+        /* WEBSITE BUTTON */
+        .website{
 
-.email:hover{
-    text-decoration:underline;
-}
+            margin:20px 0 15px;
+        }
 
-/* BUTTONS */
+        .website-button{
 
-.website,
-.vcard-button{
+            display:inline-block;
 
-    margin:20px 0 15px;
-}
+            background:#0077c8;
 
-.website-button,
-.vcard-button{
+            color:white;
 
-    display:inline-block;
+            text-decoration:none;
 
-    background:#0077c8;
+            padding:16px 32px;
 
-    color:white;
+            border-radius:40px;
 
-    text-decoration:none;
+            font-size:1.2rem;
 
-    padding:16px 32px;
+            font-weight:500;
 
-    border-radius:40px;
+            box-shadow:0 6px 14px rgba(0,119,200,0.25);
 
-    font-size:1.2rem;
+            transition:all 0.2s;
 
-    font-weight:500;
+            width:100%;
 
-    box-shadow:0 6px 14px rgba(0,119,200,0.25);
+            letter-spacing:0.5px;
+        }
 
-    transition:all 0.2s;
+        .website-button:hover{
 
-    width:100%;
+            background:#005fa1;
 
-    letter-spacing:0.5px;
-}
+            box-shadow:0 8px 18px rgba(0,119,200,0.35);
 
-.website-button:hover,
-.vcard-button:hover{
-    background:#005fa1;
-    transform:translateY(-2px);
-}
+            transform:translateY(-2px);
+        }
 
-.website-button:active,
-.vcard-button:active{
-    transform:translateY(0);
-}
+        .website-button:active{
+            transform:translateY(0);
+        }
 
-.hint{
+        /* VCARD BUTTON */
+        .vcard-button{
 
-    color:#6f8fa0;
+            display:inline-block;
 
-    font-size:0.9rem;
+            background:#0077c8;
 
-    margin-top:15px;
-}
+            color:white;
 
-.location{
+            text-decoration:none;
 
-    font-weight:600;
+            padding:16px 32px;
 
-    color:#1a2a3a;
+            border-radius:40px;
 
-    margin-top:15px;
+            font-size:1.2rem;
 
-    font-size:0.95rem;
-}
+            font-weight:500;
 
-/* =========================
-   MOBILE FIX
-   ========================= */
+            margin:5px 0 15px;
 
-@media (max-width:480px){
+            box-shadow:0 6px 14px rgba(0,119,200,0.25);
 
-    .card{
-        padding:30px 20px;
-    }
+            transition:all 0.2s;
 
-    .name{
-        font-size:2rem;
-    }
+            width:100%;
 
-    .company{
-        font-size:1.2rem;
-    }
+            border:none;
 
-    .logo-container{
-        min-height:190px;
-    }
+            cursor:pointer;
 
-    .logo-inner img{
-        height:160%; /* stärkerer Crop auf Mobile */
-    }
+            letter-spacing:0.5px;
+        }
 
-    .text{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:2px;
-    }
+        .vcard-button:hover{
 
-    .label{
-        margin-bottom:2px;
-    }
+            background:#005fa1;
 
-    .website-button,
-    .vcard-button{
-        font-size:1rem;
-        padding:14px 20px;
-    }
-}
+            box-shadow:0 8px 18px rgba(0,119,200,0.35);
 
-</style>
+            transform:translateY(-2px);
+        }
+
+        .vcard-button:active{
+            transform:translateY(0);
+        }
+
+        .hint{
+
+            color:#6f8fa0;
+
+            font-size:0.9rem;
+
+            margin-top:15px;
+        }
+
+        .location{
+
+            font-weight:600;
+
+            color:#1a2a3a;
+
+            margin-top:15px;
+
+            font-size:0.95rem;
+        }
+
+        /* MOBILE */
+        @media (max-width:480px){
+
+            .card{
+                padding:30px 20px;
+            }
+
+            .name{
+                font-size:2rem;
+            }
+
+            .company{
+                font-size:1.2rem;
+            }
+
+            .logo-container{
+                min-height:190px;
+            }
+
+            .logo-container img{
+
+                transform:scale(1.8);
+
+                /* ✅ sauberer Crop statt hacky margins */
+                clip-path: inset(20% 0 20% 0);
+            }
+
+            .text{
+
+                display:flex;
+
+                flex-direction:column;
+
+                align-items:flex-start;
+
+                gap:2px;
+            }
+
+            .label{
+                margin-bottom:2px;
+            }
+
+            .website-button,
+            .vcard-button{
+
+                font-size:1rem;
+
+                padding:14px 20px;
+            }
+
+        }
+
+    </style>
 </head>
 
 <body>
@@ -327,9 +374,10 @@ body{
 <div class="card">
 
     <div class="logo-container">
-        <div class="logo-inner">
-            <img src="levata-logo.jpg" alt="Levata">
-        </div>
+
+        <img src="levata-logo.jpg"
+             alt="Levata">
+
     </div>
 
     <h1 class="name">Tom Polak</h1>
@@ -339,33 +387,54 @@ body{
     <div class="detail">
 
         <div class="detail-item">
+
             <span class="emoji">📞</span>
+
             <span class="text">
+
                 <span class="label">T:</span>
                 <span>+44 7837 501798</span>
+
             </span>
+
         </div>
 
         <div class="detail-item">
+
             <span class="emoji">✉️</span>
+
             <span class="text">
+
                 <span class="label">M:</span>
-                <a class="email" href="mailto:tom.polak@levata.com">
+
+                <a href="mailto:tom.polak@levata.com"
+                   class="email">
                     tom.polak@levata.com
                 </a>
+
             </span>
+
         </div>
 
     </div>
 
     <div class="website">
-        <a class="website-button" href="https://www.levata.com" target="_blank">
+
+        <a href="https://www.levata.com"
+           target="_blank"
+           class="website-button">
+
             🌐 Visit Levata.com
+
         </a>
+
     </div>
 
-    <a class="vcard-button" href="Tom-Polak.vcf">
+    <a href="Tom-Polak.vcf"
+       class="vcard-button">
+
         ⬇️ Save Contact (vCard)
+
     </a>
 
     <div class="hint">
