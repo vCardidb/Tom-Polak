@@ -1,372 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tom Polak | Levata</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tom Polak | Levata</title>
 
-    <style>
+<style>
 
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        body{
+body{
 
-            font-family:'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-family:'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
-            background:linear-gradient(
-                to bottom,
-                #a245a6 0%,
-                #7a5eb7 45%,
-                #0077c8 100%
-            );
+    background:linear-gradient(
+        to bottom,
+        #a245a6 0%,
+        #7a5eb7 45%,
+        #0077c8 100%
+    );
 
-            min-height:100vh;
+    min-height:100vh;
 
-            display:flex;
-            align-items:center;
-            justify-content:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-            padding:20px;
-        }
+    padding:20px;
+}
 
-        .card{
+.card{
 
-            background:white;
+    background:white;
 
-            max-width:550px;
-            width:100%;
+    max-width:550px;
+    width:100%;
 
-            padding:45px 40px;
+    padding:45px 40px;
 
-            border-radius:24px;
+    border-radius:24px;
 
-            box-shadow:0 30px 50px -20px rgba(0,0,0,0.3);
+    box-shadow:0 30px 50px -20px rgba(0,0,0,0.3);
 
-            text-align:center;
+    text-align:center;
 
-            border-top:5px solid #0077c8;
-        }
+    border-top:5px solid #0077c8;
+}
 
-        .logo-container{
+/* =========================
+   LOGO FIX (STABLE VERSION)
+   ========================= */
 
-            margin-bottom:30px;
+.logo-container{
 
-            padding:0;
+    margin-bottom:30px;
 
-            background:linear-gradient(
-                to bottom,
-                #a245a6 0%,
-                #7a5eb7 45%,
-                #0077c8 100%
-            );
+    padding:0;
 
-            border-radius:0;
+    background:linear-gradient(
+        to bottom,
+        #a245a6 0%,
+        #7a5eb7 45%,
+        #0077c8 100%
+    );
 
-            min-height:220px;
+    border-radius:0;
 
-            display:flex;
-            align-items:center;
-            justify-content:center;
+    min-height:220px;
 
-            overflow:hidden;
-        }
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-        .logo-container img{
+    overflow:hidden;
+}
 
-            transform:scale(2.1);
+.logo-inner{
 
-            max-width:100%;
-            max-height:100%;
+    width:100%;
+    height:100%;
 
-            width:auto;
-            height:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-            display:block;
+    overflow:hidden;
+}
 
-            object-fit:contain;
+.logo-inner img{
 
-            margin-top:-5%;
-            margin-bottom:-5%;
-        }
+    width:auto;
+    height:140%;
 
-        .name{
+    object-fit:cover;
+}
 
-            font-size:2.5rem;
+/* ========================= */
 
-            font-weight:500;
+.name{
 
-            color:#1a2a3a;
+    font-size:2.5rem;
 
-            line-height:1.2;
+    font-weight:500;
 
-            margin-bottom:5px;
+    color:#1a2a3a;
 
-            font-family:'Georgia', serif;
-        }
+    line-height:1.2;
 
-        .company{
+    margin-bottom:5px;
 
-            font-size:1.4rem;
+    font-family:'Georgia', serif;
+}
 
-            color:#0077c8;
+.company{
 
-            font-weight:500;
+    font-size:1.4rem;
 
-            margin-bottom:25px;
+    color:#0077c8;
 
-            padding-bottom:15px;
+    font-weight:500;
 
-            border-bottom:2px solid #e5eef5;
+    margin-bottom:25px;
 
-            letter-spacing:0.5px;
-        }
+    padding-bottom:15px;
 
-        .detail{
+    border-bottom:2px solid #e5eef5;
 
-            margin:30px 0;
+    letter-spacing:0.5px;
+}
 
-            text-align:left;
+.detail{
 
-            background:#f5f8fc;
+    margin:30px 0;
 
-            padding:25px;
+    text-align:left;
 
-            border-radius:16px;
-        }
+    background:#f5f8fc;
 
-        .detail-item{
+    padding:25px;
 
-            display:flex;
+    border-radius:16px;
+}
 
-            align-items:flex-start;
+.detail-item{
 
-            margin:18px 0;
+    display:flex;
 
-            font-size:1.1rem;
-        }
+    align-items:flex-start;
 
-        .emoji{
+    margin:18px 0;
 
-            font-size:1.5rem;
+    font-size:1.1rem;
+}
 
-            margin-right:18px;
+.emoji{
 
-            min-width:35px;
+    font-size:1.5rem;
 
-            text-align:center;
+    margin-right:18px;
 
-            color:#0077c8;
-        }
+    min-width:35px;
 
-        .text{
+    text-align:center;
 
-            color:#2c4050;
+    color:#0077c8;
+}
 
-            line-height:1.4;
+.text{
 
-            display:flex;
+    color:#2c4050;
 
-            align-items:center;
+    line-height:1.4;
 
-            gap:6px;
+    display:flex;
 
-            flex-wrap:wrap;
-        }
+    align-items:center;
 
-        .label{
+    gap:6px;
 
-            font-weight:600;
+    flex-wrap:wrap;
+}
 
-            color:#0077c8;
+.label{
 
-            min-width:28px;
-        }
+    font-weight:600;
 
-        .email{
+    color:#0077c8;
 
-            color:#0077c8;
+    min-width:28px;
+}
 
-            text-decoration:none;
+.email{
 
-            font-weight:500;
+    color:#0077c8;
 
-            word-break:break-word;
-        }
+    text-decoration:none;
 
-        .email:hover{
-            text-decoration:underline;
-        }
+    font-weight:500;
 
-        /* WEBSITE BUTTON */
-        .website{
+    word-break:break-word;
+}
 
-            margin:20px 0 15px;
-        }
+.email:hover{
+    text-decoration:underline;
+}
 
-        .website-button{
+/* BUTTONS */
 
-            display:inline-block;
+.website,
+.vcard-button{
 
-            background:#0077c8;
+    margin:20px 0 15px;
+}
 
-            color:white;
+.website-button,
+.vcard-button{
 
-            text-decoration:none;
+    display:inline-block;
 
-            padding:16px 32px;
+    background:#0077c8;
 
-            border-radius:40px;
+    color:white;
 
-            font-size:1.2rem;
+    text-decoration:none;
 
-            font-weight:500;
+    padding:16px 32px;
 
-            box-shadow:0 6px 14px rgba(0,119,200,0.25);
+    border-radius:40px;
 
-            transition:all 0.2s;
+    font-size:1.2rem;
 
-            width:100%;
+    font-weight:500;
 
-            letter-spacing:0.5px;
-        }
+    box-shadow:0 6px 14px rgba(0,119,200,0.25);
 
-        .website-button:hover{
+    transition:all 0.2s;
 
-            background:#005fa1;
+    width:100%;
 
-            box-shadow:0 8px 18px rgba(0,119,200,0.35);
+    letter-spacing:0.5px;
+}
 
-            transform:translateY(-2px);
-        }
+.website-button:hover,
+.vcard-button:hover{
+    background:#005fa1;
+    transform:translateY(-2px);
+}
 
-        .website-button:active{
-            transform:translateY(0);
-        }
+.website-button:active,
+.vcard-button:active{
+    transform:translateY(0);
+}
 
-        /* VCARD BUTTON */
-        .vcard-button{
+.hint{
 
-            display:inline-block;
+    color:#6f8fa0;
 
-            background:#0077c8;
+    font-size:0.9rem;
 
-            color:white;
+    margin-top:15px;
+}
 
-            text-decoration:none;
+.location{
 
-            padding:16px 32px;
+    font-weight:600;
 
-            border-radius:40px;
+    color:#1a2a3a;
 
-            font-size:1.2rem;
+    margin-top:15px;
 
-            font-weight:500;
+    font-size:0.95rem;
+}
 
-            margin:5px 0 15px;
+/* =========================
+   MOBILE FIX
+   ========================= */
 
-            box-shadow:0 6px 14px rgba(0,119,200,0.25);
+@media (max-width:480px){
 
-            transition:all 0.2s;
+    .card{
+        padding:30px 20px;
+    }
 
-            width:100%;
+    .name{
+        font-size:2rem;
+    }
 
-            border:none;
+    .company{
+        font-size:1.2rem;
+    }
 
-            cursor:pointer;
+    .logo-container{
+        min-height:190px;
+    }
 
-            letter-spacing:0.5px;
-        }
+    .logo-inner img{
+        height:160%; /* stärkerer Crop auf Mobile */
+    }
 
-        .vcard-button:hover{
+    .text{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:2px;
+    }
 
-            background:#005fa1;
+    .label{
+        margin-bottom:2px;
+    }
 
-            box-shadow:0 8px 18px rgba(0,119,200,0.35);
+    .website-button,
+    .vcard-button{
+        font-size:1rem;
+        padding:14px 20px;
+    }
+}
 
-            transform:translateY(-2px);
-        }
-
-        .vcard-button:active{
-            transform:translateY(0);
-        }
-
-        .hint{
-
-            color:#6f8fa0;
-
-            font-size:0.9rem;
-
-            margin-top:15px;
-        }
-
-        .location{
-
-            font-weight:600;
-
-            color:#1a2a3a;
-
-            margin-top:15px;
-
-            font-size:0.95rem;
-        }
-
-        /* MOBILE */
-        @media (max-width:480px){
-
-            .card{
-                padding:30px 20px;
-            }
-
-            .name{
-                font-size:2rem;
-            }
-
-            .company{
-                font-size:1.2rem;
-            }
-
-            .logo-container{
-                min-height:190px;
-            }
-
-            .logo-container img{
-
-                transform:scale(1.8);
-
-                /* ✅ sauberer Crop statt hacky margins */
-                clip-path: inset(20% 0 20% 0);
-            }
-
-            .text{
-
-                display:flex;
-
-                flex-direction:column;
-
-                align-items:flex-start;
-
-                gap:2px;
-            }
-
-            .label{
-                margin-bottom:2px;
-            }
-
-            .website-button,
-            .vcard-button{
-
-                font-size:1rem;
-
-                padding:14px 20px;
-            }
-
-        }
-
-    </style>
+</style>
 </head>
 
 <body>
@@ -374,10 +327,9 @@
 <div class="card">
 
     <div class="logo-container">
-
-        <img src="levata-logo.jpg"
-             alt="Levata">
-
+        <div class="logo-inner">
+            <img src="levata-logo.jpg" alt="Levata">
+        </div>
     </div>
 
     <h1 class="name">Tom Polak</h1>
@@ -387,54 +339,33 @@
     <div class="detail">
 
         <div class="detail-item">
-
             <span class="emoji">📞</span>
-
             <span class="text">
-
                 <span class="label">T:</span>
                 <span>+44 7837 501798</span>
-
             </span>
-
         </div>
 
         <div class="detail-item">
-
             <span class="emoji">✉️</span>
-
             <span class="text">
-
                 <span class="label">M:</span>
-
-                <a href="mailto:tom.polak@levata.com"
-                   class="email">
+                <a class="email" href="mailto:tom.polak@levata.com">
                     tom.polak@levata.com
                 </a>
-
             </span>
-
         </div>
 
     </div>
 
     <div class="website">
-
-        <a href="https://www.levata.com"
-           target="_blank"
-           class="website-button">
-
+        <a class="website-button" href="https://www.levata.com" target="_blank">
             🌐 Visit Levata.com
-
         </a>
-
     </div>
 
-    <a href="Tom-Polak.vcf"
-       class="vcard-button">
-
+    <a class="vcard-button" href="Tom-Polak.vcf">
         ⬇️ Save Contact (vCard)
-
     </a>
 
     <div class="hint">
